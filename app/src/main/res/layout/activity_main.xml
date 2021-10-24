@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.sy_diyview.widget.Bilibli_Loading
+                android:layout_marginTop="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/img"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <TextView
+                android:id="@+id/text_bili"
+                android:textSize="12sp"
+                android:textColor="#fa729a"
+                android:text="正在缓冲...0KB/s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:id="@+id/title_bili"
+                android:layout_below="@+id/text_bili"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Bilibili加载图"/>
+
+            <com.example.sy_diyview.widget.JD_Loading
+                android:id="@+id/img_JD"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/title_bili"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:id="@+id/title_JD"
+                android:layout_below="@+id/img_JD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="京东加载图"/>
+            <LinearLayout
+                android:padding="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_below="@id/title_JD"
+                android:background="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content">
+                <com.example.sy_diyview.widget.DY_Loading
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="抖音加载图"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
